@@ -5,3 +5,11 @@ username = "root"
 password = "root"
 maxOpenConn = 30
 maxIdleConn = 5
+
+[http]
+addr = "0.0.0.0:8000"
+
+[aliyun]
+accessKeyId = "LTAI5t6RBeuSxaQRvRUwGYzA"
+accessKeySecret = "nErEBupZGcBFB0ig2nV14nWapXx72q"
+regionId = ["cn-wulanchabu"]

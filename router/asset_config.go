@@ -1,6 +1,8 @@
 package router
 
 import (
+	"decision-maker-cmdb/pkg/aliyun"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,7 +16,7 @@ func loadAsset(r *gin.Engine) {
 // var SyncList = make(map[string]func([]string) error)
 
 func HanderUpdateOSServer(c *gin.Context) {
-
+	aliyun.AliOpt.StartSync()
 }
 
 func HanderUpdateRDS(c *gin.Context) {

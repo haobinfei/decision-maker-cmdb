@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -61,4 +62,8 @@ type ServerDetail struct {
 	InstanceState string `gorm:"instanceState"`
 	CreateAt      time.Time
 	UpdateAt      time.Time
+}
+
+func (as *AssteServer) Update() {
+	fmt.Println(as.Hostname)
 }

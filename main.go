@@ -1,14 +1,11 @@
+/*
+Copyright © 2022 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import (
-	"decision-maker-cmdb/conf"
-	"decision-maker-cmdb/pkg/mysql"
-)
+import "decision-maker-cmdb/cmd"
 
 func main() {
-
-	conf.InitConfig()
-	db := mysql.InitDB()
-	db.Ping()
-
+	cmd.Execute()
 }
