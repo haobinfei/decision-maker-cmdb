@@ -10,7 +10,6 @@ import (
 )
 
 func (ac *AliCloud) SyncServerInfo() error {
-	fmt.Println(ac.regionIds)
 	for _, regionId := range ac.regionIds {
 		request := &ecs20140526.DescribeInstancesRequest{
 			RegionId:   tea.String(regionId),
@@ -24,11 +23,7 @@ func (ac *AliCloud) SyncServerInfo() error {
 				return err
 			}
 			for _, instancesWithOptions := range resp.Body.Instances.Instance {
-				aliOSServe := &models.AssteServer{
-					Hostname: *instancesWithOptions.HostName,
-				}
-
-				aliOSServe.Update()
+				models.Sync(instancesWithOptions)
 			}
 			if *resp.Body.NextToken == "" {
 				break

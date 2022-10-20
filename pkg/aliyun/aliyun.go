@@ -1,5 +1,7 @@
 package aliyun
 
+// ali SDK verson is 2014-05-26
+
 import (
 	"decision-maker-cmdb/conf"
 	"time"
